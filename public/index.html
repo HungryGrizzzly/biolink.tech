@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Biolink.tech</title>
+</head>
+<style>
+  .preloader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgb(4, 0, 14);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+  }
+
+  #preloader {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  #preloader span {
+    position: absolute;
+    border: 8px solid #ef7900;
+    border-top: 8px solid transparent;
+    border-radius: 999px;
+  }
+
+  #preloader span:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    animation: spin-1 2s infinite linear;
+  }
+
+  #preloader span:nth-child(2) {
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    animation: spin-2 1s infinite linear;
+  }
+
+  @keyframes spin-1 {
+    0% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+
+    50% {
+      transform: rotate(180deg);
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin-2 {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(360deg);
+      opacity: 0.5;
+    }
+  }
+</style>
+
+<body>
+  <div class="preloader">
+    <div id="preloader">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div id="root"></div>
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//analytics.biolink.tech/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '3']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <noscript>
+    <p><img src="//analytics.biolink.tech/piwik.php?idsite=3&rec=1" style="border:0;" alt="" /></p>
+  </noscript>
+  <!-- End Matomo Code -->
+</body>
+
+</html>
