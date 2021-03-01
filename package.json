@@ -11,7 +11,7 @@
     "react-scripts": "2.1.8",
     "react-typed": "^1.1.1",
     "styled-components": "^4.1.3",
-    "three": "^0.102.1",
+    "three": "^0.125.0",
     "typed.js": "^2.0.10",
     "yandex-map-react": "^1.1.1"
   },
